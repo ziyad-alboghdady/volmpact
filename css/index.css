@@ -1,0 +1,350 @@
+:root {
+  --primary: #4A90E2;    /* Modern blue */
+  --secondary: #2C3E50;  /* Deep navy */
+  --accent: #16A085;     /* Teal */
+  --light: #F5F7FA;      /* Light gray */
+  --dark: #2C3E50;       /* Deep navy */
+  --success: #27AE60;    /* Green */
+  --warning: #F1C40F;    /* Yellow */
+  --danger: #E74C3C;     /* Red */
+  --text-primary: #2C3E50;   /* Main text color */
+  --text-secondary: #7F8C8D; /* Secondary text color */
+  --transition: all 0.3s ease;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 85vh;
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.hero-section canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-section .container {
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+}
+
+.hero-buttons .btn {
+  padding: 1rem 2rem;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: var(--transition);
+  min-width: 180px;
+}
+
+.hero-buttons .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Featured Section */
+.featured-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.section-title {
+  color: var(--secondary);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary);
+}
+
+.featured-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(44, 62, 80, 0.05);
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(74, 144, 226, 0.1);
+}
+
+.featured-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.1);
+  border-color: rgba(74, 144, 226, 0.2);
+}
+
+.featured-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+
+.featured-card:hover .featured-icon {
+  transform: scale(1.1);
+  color: var(--accent);
+}
+
+.featured-card h3 {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.featured-card p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  line-height: 1.6;
+}
+
+.learn-more {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition);
+  margin-top: auto;
+}
+
+.learn-more:hover {
+  color: var(--accent);
+}
+
+.learn-more i {
+  transition: var(--transition);
+}
+
+.learn-more:hover i {
+  transform: translateX(5px);
+}
+
+/* Impact Section */
+.impact-section {
+  background-color: var(--light);
+  padding: 5rem 0;
+}
+
+.impact-image {
+  position: relative;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.impact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.impact-image:hover img {
+  transform: scale(1.05);
+}
+
+.impact-stat-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(44, 62, 80, 0.05);
+  transition: var(--transition);
+  text-align: center;
+  height: 100%;
+  border: 1px solid rgba(74, 144, 226, 0.1);
+}
+
+.impact-stat-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.1);
+  border-color: rgba(74, 144, 226, 0.2);
+}
+
+.impact-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.impact-stat-box:hover .impact-icon {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+.impact-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.impact-text {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Volunteer Section */
+.volunteer-section {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.volunteer-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    rgba(74, 144, 226, 0.1) 0%,
+    rgba(22, 160, 133, 0.1) 100%);
+  z-index: 0;
+}
+
+.volunteer-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-buttons {
+  margin-top: 2rem;
+}
+
+.volunteer-btn {
+  background-color: white;
+  color: var(--primary);
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+  min-width: 200px;
+}
+
+.volunteer-btn:hover {
+  background-color: var(--light);
+  color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.volunteer-btn.btn-outline {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.volunteer-btn.btn-outline:hover {
+  background-color: white;
+  color: var(--primary);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+  .hero-section {
+    height: 70vh;
+  }
+
+  .impact-image {
+    height: 400px;
+    margin-top: 2rem;
+  }
+
+  .featured-card {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-section {
+    height: 60vh;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .impact-stat-box {
+    margin-bottom: 1rem;
+  }
+
+  .cta-buttons .volunteer-btn {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-buttons .btn {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .featured-card {
+    padding: 1.5rem;
+  }
+}
